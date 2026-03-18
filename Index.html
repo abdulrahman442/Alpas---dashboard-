@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPAS Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+      <h1>ALPAS Middleware</h1>
+      <p>Live MFM Telemetry</p>
+    </div>
+    <div class="status">
+      <span id="connectionStatus" class="connected">ALPAS Connected</span>
+      <button id="toggleSim">Stop Simulator</button>
+    </div>
+  </nav>
+
+  <!-- KPI Cards -->
+  <section class="kpi-cards">
+    <div class="card">
+      <h3>Mass Flow</h3>
+      <p id="massFlow">0.00 kg/s</p>
+    </div>
+    <div class="card">
+      <h3>Density</h3>
+      <p id="density">0.00 kg/m³</p>
+    </div>
+    <div class="card">
+      <h3>Temperature</h3>
+      <p id="temperature">0.0 °C</p>
+    </div>
+    <div class="card">
+      <h3>Outbox Buffer</h3>
+      <p id="outbox">0 Pending</p>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="charts">
+    <canvas id="massFlowChart"></canvas>
+    <canvas id="densityTempChart"></canvas>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
